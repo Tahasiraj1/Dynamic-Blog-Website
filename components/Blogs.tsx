@@ -1,8 +1,3 @@
-
-
-"use client"
-
-import { motion } from "framer-motion"
 import { BlogCard } from "@/components/BlogCard"
 
 const posts = [
@@ -68,15 +63,15 @@ export default function Blogs() {
   return (
     <section>
       <div className="relative">
-        <motion.div
+        <div
           className="grid grid-cols-1 sm+:grid-cols-2 lg:grid-cols-3 gap-8 py-10 px-4"
         >
           {posts.map((post, index) => (
-            <motion.div key={index}>
+            <div key={index}>
               <BlogCard {...post} />
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

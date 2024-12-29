@@ -18,7 +18,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         expandIcon:
-          "text-primary-foreground relative bg-primary z-0 overflow-hidden transition-all duration-500 after:absolute after:inset-0 after:-z-10 after:translate-x-[-150%] after:translate-y-[150%] after:scale-[2.5] after:rounded-[100%] after:bg-gradient-to-l from-emerald-500 after:transition-transform after:duration-1000  hover:after:translate-x-[0%] hover:after:translate-y-[0%] group relative text-primary-foreground bg-primary hover:bg-primary/90",
+          "group relative",
         ringHover:
           "bg-primary text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2",
         shine:
@@ -95,7 +95,7 @@ const Button = React.forwardRef<
         <Slottable>{props.children}</Slottable>
         {Icon && iconPlacement === "right" && (
           <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
-            <Icon className="text-white" />
+            <Icon className="w-6 h-6 dark:text-black text-white" />
           </div>
         )}
       </Comp>

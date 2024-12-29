@@ -11,13 +11,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
-import DotPattern from "../ui/dot-pattern";
 import { ModeToggle } from "../Theme-Toggle";
 
 const Header = () => {
   return (
     <div className="relative font-extrabold text-xl w-full h-20 flex items-center justify-between drop-shadow-2xl px-4 md:px-8">
-      <DotPattern className="absolute top-0 left-0 -z-10" />
       <h1 className="font-bold text-2xl animate-in slide-in-from-left-full transition-transform transform duration-1000">
         NAME
       </h1>

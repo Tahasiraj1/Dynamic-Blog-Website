@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { Textarea } from './ui/textarea'
+import { Button } from './ui/button'
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Comments() {
   const [comments, setComments] = useState<string[]>([])
@@ -33,12 +35,15 @@ export default function Comments() {
           placeholder="Write a comment..."
           rows={3}
         />
-        <button
+        <Button
+          variant="expandIcon"
+          iconPlacement='right'
+          Icon={IoIosArrowRoundForward}
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-primary text-primary-foreground px-4 py-2 rounded-full"
         >
           Add Comment
-        </button>
+        </Button>
       </form>
     </div>
   )
