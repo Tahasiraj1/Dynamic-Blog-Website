@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="relative flex-col items-center justify-center p-10 overflow-x-clip">
-      <div className="absolute -top-20 -left-40 opacity-50 -z-10 animate-pulse-slow">
+      <div className="absolute -top-20 -left-40 opacity-50 -z-10">
         <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={500} blur={60} />
       </div>
-      <div className="absolute -top-20 right-52 opacity-50 -z-10 animate-pulse-slow">
+      <div className="absolute -top-20 right-52 opacity-50 -z-10">
         <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={500} blur={60} />
       </div>
       <h1 className="text-3xl md:text-5xl font-bold text-center">

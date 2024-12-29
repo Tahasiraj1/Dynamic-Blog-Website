@@ -50,7 +50,7 @@ export function BlogCard({ id, name, image, specialties, description }: BlogrPro
                     {name}
                 </CardTitle>
             </CardHeader>
-            <CardContent className="overflow-clip relative p-4 rounded-b-md border-2 border-t-0 border-fuchsia-700 bg-black ">
+            <CardContent className="overflow-clip relative p-4 rounded-b-md border-2 border-t-0 border-fuchsia-600 bg-black ">
                     <div className='absolute top-0 right-40 opacity-50 animate-pulse-slow' >
                         <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={200} blur={60} />
                     </div>
@@ -67,7 +67,7 @@ export function BlogCard({ id, name, image, specialties, description }: BlogrPro
                         <Button 
                         onClick={handlePassHreff}
                         variant='gooeyLeft'
-                        className="flex items-center justify-center gap-2 group rounded-full bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                        className="border-2 border-fuchsia-600 flex items-center justify-center gap-2 group rounded-full bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                             Read More <MdArrowUpward className="w-4 h-4 rotate-45 transition-transform duration-300 group-hover:rotate-90" />
                         </Button>
             </CardContent>

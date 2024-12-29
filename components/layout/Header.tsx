@@ -15,7 +15,7 @@ import DotPattern from "../ui/dot-pattern";
 
 const Header = () => {
   return (
-    <div className="relative font-extrabold text-xl w-full h-20 flex items-center justify-between drop-shadow-xl text-black px-4 md:px-8 top-0 z-50 opacity-90 backdrop-blur-3xl bg-white/60">
+    <div className="relative font-extrabold text-xl w-full h-20 flex items-center justify-between drop-shadow-2xl text-black px-4 md:px-8">
       <DotPattern className="absolute top-0 left-0 -z-10" />
       <h1 className="font-bold text-2xl animate-in slide-in-from-left-full transition-transform transform duration-1000">
         NAME
@@ -35,7 +35,7 @@ const Header = () => {
             </Link>
           </Button>
           <Button variant="linkHover2">
-            <Link href="/products">
+            <Link href="/posts">
               <motion.li
                 className="font-semibold text-lg drop-shadow-lg"
                 initial={{ opacity: 0, y: -20 }}
@@ -80,13 +80,13 @@ const Header = () => {
               size="icon"
               className="md:hidden bg-transparent hover:bg-transparent"
             >
-              <RiMenu3Line className="w-6 h-6 text-black hover:text-emerald-200" />
+              <RiMenu3Line className="w-6 h-6 text-black" />
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="pt-20 bg-emerald-800 text-white border-gray-600"
+            className="pt-20 bg-primary text-white border-r-0 border-t-0 border-b-0 border-l-2 border-fuchsia-600"
           >
             <SheetHeader>
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
@@ -108,7 +108,7 @@ const Header = () => {
                     asChild
                     className="w-full justify-start"
                   >
-                    <Link href="/products">PRODUCTS</Link>
+                    <Link href="/posts">BLOGS</Link>
                   </Button>
                 </li>
                 <li>
@@ -127,24 +127,6 @@ const Header = () => {
                     className="w-full justify-start"
                   >
                     <Link href="/contact">CONTACT</Link>
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    variant="linkHover2"
-                    asChild
-                    className="w-full justify-start"
-                  >
-                    <Link href="/cart">CART</Link>
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    variant="linkHover2"
-                    asChild
-                    className="w-full justify-start"
-                  >
-                    <Link href="/dashboard">DASHBOARD</Link>
                   </Button>
                 </li>
               </ul>
