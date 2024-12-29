@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { Phone } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -35,35 +38,41 @@ const Footer = () => {
                     <h3 className="text-xl font-bold mb-4">Quick Links</h3>
                     <ul className="space-y-2">
                     <li><Link href="/" className="hover:text-fuchsia-700 transition-colors">Home</Link></li>
-                    <li><Link href="/products" className="hover:text-fuchsia-700 transition-colors">Products</Link></li>
+                    <li><Link href="/posts" className="hover:text-fuchsia-700 transition-colors">Blogs</Link></li>
                     <li><Link href="/about" className="hover:text-fuchsia-700 transition-colors">About Us</Link></li>
                     <li><Link href="/contact" className="hover:text-fuchsia-700 transition-colors">Contact</Link></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 className="text-xl font-bold mb-4">Programs</h3>
+                    <h3 className="text-xl font-bold mb-4">Popular Blogs</h3>
                     <ul className="space-y-2">
-                    <li><Link href="/" className="hover:text-fuchsia-700 transition-colors">Karate</Link></li>
-                    <li><Link href="/products" className="hover:text-fuchsia-700 transition-colors">Taekwondo</Link></li>
-                    <li><Link href="/about" className="hover:text-fuchsia-700 transition-colors">Kung Fu</Link></li>
-                    <li><Link href="/contact" className="hover:text-fuchsia-700 transition-colors">KickBoxing</Link></li>
+                    <li><Link href="/posts/2" className="hover:text-fuchsia-700 transition-colors">Understanding JavaScript</Link></li>
+                    <li><Link href="/posts/3" className="hover:text-fuchsia-700 transition-colors">Why Learn TypeScript?</Link></li>
+                    <li><Link href="/posts/4" className="hover:text-fuchsia-700 transition-colors">The Power of Python</Link></li>
+                    <li><Link href="/posts/1" className="hover:text-fuchsia-700 transition-colors">Where to Start</Link></li>
                     </ul>
                 </div>
             
                 <div>
-                    <h2 className="text-xl font-bold mb-4">Visit Our School</h2>
-                    <p>
-                    123 Street, Karachi, Pakistan
+                    <h2 className="text-xl font-bold mb-4">Contact</h2>
+                    <p className='mt-4 flex items-center'>
+                        <Phone className='w-6 h-6' />
+                        <span className="ml-2">+1 234 567 890</span>
                     </p>
-                    <p className='mt-4'>
-                    Open Monday to Saturday, 10:00 AM - 9:00 PM
+                    <p className='mt-4 flex items-center'>
+                        <FaWhatsapp className='w-6 h-6' />
+                        <span className="ml-2">+1 234 567 890</span>
+                    </p>
+                    <p className='mt-4 flex items-center'>
+                        <MdEmail className='w-6 h-6' />
+                        <span className="ml-2">abc@gmail.com</span>
                     </p>
                 </div>
             </div>
             
             <div className="mt-12 pt-8 border-t border-fuchsia-700 text-center text-sm">
-            <p>&copy; 2024 The Executor. All rights reserved.</p>
+            <p>&copy; 2024 404 Found. All rights reserved.</p>
             </div>
         </div>
     </footer>

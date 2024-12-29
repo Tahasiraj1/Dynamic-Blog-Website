@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <div className="relative font-extrabold text-xl w-full h-20 flex items-center justify-between drop-shadow-2xl px-4 md:px-8">
       <h1 className="font-bold text-2xl animate-in slide-in-from-left-full transition-transform transform duration-1000">
-        NAME
+        404 Found
       </h1>
       <div className="hidden md:block font-semibold">
         <ul className="flex">
