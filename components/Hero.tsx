@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="flex items-center justify-center mt-20 space-x-2 relative">
         <motion.div
           className="rounded-lg aspect-square overflow-hidden"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{
@@ -65,7 +65,7 @@ const Hero = () => {
         </motion.div>
         <motion.div
           className="rounded-lg aspect-square overflow-hidden"
-          initial={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{
