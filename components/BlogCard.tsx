@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "./ui/button"
 import { MdArrowUpward } from "react-icons/md";
 import { useRouter } from "next/navigation"
+import { GradientBlob } from '@/components/ui/GradientBlob'
 
 
 interface BlogrProps {
@@ -49,15 +50,20 @@ export function BlogCard({ id, name, image, specialties, description }: BlogrPro
                     {name}
                 </CardTitle>
             </CardHeader>
-            <CardContent className="p-4 rounded-b-md border-2 border-t-0 border-fuchsia-700 bg-black ">
-                    <div className="flex flex-wrap gap-2 mb-4">
+            <CardContent className="overflow-clip relative p-4 rounded-b-md border-2 border-t-0 border-fuchsia-700 bg-black ">
+                    <div className='absolute top-0 right-40 opacity-50 animate-pulse-slow' >
+                        <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={200} blur={60} />
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-4 z-20">
                         {specialties.map((specialty, index) => (
-                        <Badge key={index} className="rounded-full bg-red-600 hover:bg-red-700">
+                        <Badge key={index} className="rounded-full bg-fuchsia-600 hover:bg-fuchsia-700">
                             {specialty}
                         </Badge>
                         ))}
                     </div>
-                    <CardDescription className="text-gray-300 line-clamp-2 mb-4">{description}</CardDescription>
+                    <CardDescription className="text-gray-300 line-clamp-2 mb-4 z-20">
+                        {description}
+                    </CardDescription>
                         <Button 
                         onClick={handlePassHreff}
                         variant='gooeyLeft'
