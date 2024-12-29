@@ -12,10 +12,11 @@ import {
 } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 import DotPattern from "../ui/dot-pattern";
+import { ModeToggle } from "../Theme-Toggle";
 
 const Header = () => {
   return (
-    <div className="relative font-extrabold text-xl w-full h-20 flex items-center justify-between drop-shadow-2xl text-black px-4 md:px-8">
+    <div className="relative font-extrabold text-xl w-full h-20 flex items-center justify-between drop-shadow-2xl px-4 md:px-8">
       <DotPattern className="absolute top-0 left-0 -z-10" />
       <h1 className="font-bold text-2xl animate-in slide-in-from-left-full transition-transform transform duration-1000">
         NAME
@@ -73,6 +74,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="flex gap-2 items-center justify-center animate-in slide-in-from-right-full transition-transform transform duration-1000">
+        <ModeToggle />
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -80,13 +82,13 @@ const Header = () => {
               size="icon"
               className="md:hidden bg-transparent hover:bg-transparent"
             >
-              <RiMenu3Line className="w-6 h-6 text-black" />
+              <RiMenu3Line className="w-6 h-6" />
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="pt-20 bg-primary text-white border-r-0 border-t-0 border-b-0 border-l-2 border-fuchsia-600"
+            className="pt-20 bg-primary border-r-0 border-t-0 border-b-0 border-l-2 border-fuchsia-600"
           >
             <SheetHeader>
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
