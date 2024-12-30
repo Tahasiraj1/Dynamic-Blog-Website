@@ -22,7 +22,7 @@ export default function Comments() {
       <h2 className="text-2xl font-bold mb-4">Comments</h2>
       <ul className="mb-4">
         {comments.map((comment, index) => (
-          <li key={index} className="mb-2 p-2 bg-gray-100 rounded">
+          <li key={index} className="mb-2 p-2 rounded">
             {comment}
           </li>
         ))}
