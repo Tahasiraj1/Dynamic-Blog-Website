@@ -67,7 +67,7 @@ export function BlogCard({ id, name, image, specialties, description }: BlogrPro
                         <Button 
                         onClick={handlePassHreff}
                         variant='gooeyLeft'
-                        className="border-2 border-fuchsia-600 flex items-center justify-center gap-2 group rounded-full bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                        className="border-2 border-fuchsia-600 flex items-center justify-center gap-2 group rounded-full hover:bg-primary hover:text-primary-foreground bg-primary-foreground text-primary">
                             Read More <MdArrowUpward className="w-4 h-4 rotate-45 transition-transform duration-300 group-hover:rotate-90" />
                         </Button>
             </CardContent>
