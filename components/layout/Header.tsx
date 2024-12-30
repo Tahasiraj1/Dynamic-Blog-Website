@@ -86,7 +86,7 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="pt-20 bg-primary border-r-0 border-t-0 border-b-0 border-l-2 border-fuchsia-600"
+            className="pt-20 border-r-0 border-t-0 border-b-0 border-l-2 border-fuchsia-600"
           >
             <SheetHeader>
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
