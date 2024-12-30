@@ -5,6 +5,7 @@ import Image from "next/image";
 import { GradientBlob } from "./ui/GradientBlob";
 import { motion } from "framer-motion";
 
+
 const Hero = () => {
   return (
     <div className="relative flex-col items-center justify-center p-10 overflow-x-clip">

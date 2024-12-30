@@ -11,10 +11,20 @@ const config: Config = {
   	extend: {
 		animation: {
 			'pulse-slow': 'pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			"light-beam": "light-beam 4s linear infinite",
 		  },
-		  screens: {
-			'sm+': '500px'
+		  keyframes: {
+			"light-beam": {
+			  "0%": { backgroundPosition: "0% 50%" },
+			  "100%": { backgroundPosition: "200% 50%" },
+			},
 		  },
+		  backgroundSize: {
+			"200%": "200% 200%",
+		  },
+		screens: {
+		'sm+': '500px'
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
