@@ -20,15 +20,15 @@ export const GradientBlob: React.FC<GradientBlobProps> = ({
     initial: { scale: 1, x: 0, y: 0, rotate: 0 },
     animate: {
       scale: [1, 1.1, 1],
-      x: [0, 30, 0],
-      y: [0, -30, 0],
+      x: [0, 100, 0],
+      y: [0, 100, 0],
       rotate: [0, 90, 0],
     },
   }
 
   return (
     <motion.div
-      className="absolute rounded-full mix-blend-multiply filter animate-pulse-slow"
+      className="absolute rounded-full mix-blend-multiply filter animate-pulse-slow opacity-65"
       style={{
         background: `radial-gradient(circle, ${colors.join(", ")})`,
         width: size,
