@@ -8,6 +8,7 @@ import { Button } from "./ui/button"
 import { MdArrowUpward } from "react-icons/md";
 import { useRouter } from "next/navigation"
 import { GradientBlob } from '@/components/ui/GradientBlob'
+import { Ripple } from "./ui/Ripple"
 
 
 interface BlogrProps {
@@ -50,6 +51,7 @@ export function BlogCard({ id, name, image, specialties, description }: BlogrPro
                     {name}
                 </CardTitle>
             </CardHeader>
+            <Ripple color="rgba(255, 255, 255, 0.7)" duration={0.7}>
             <CardContent className="overflow-clip relative p-4 rounded-b-md border-2 border-t-0 border-fuchsia-600 bg-black ">
                     <div className='absolute top-0 right-40 opacity-50 animate-pulse-slow' >
                         <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={200} blur={60} />
@@ -71,6 +73,7 @@ export function BlogCard({ id, name, image, specialties, description }: BlogrPro
                             Read More <MdArrowUpward className="w-4 h-4 rotate-45 transition-transform duration-300 group-hover:rotate-90" />
                         </Button>
             </CardContent>
+            </Ripple>
         </Card>
     </motion.div>
   )
