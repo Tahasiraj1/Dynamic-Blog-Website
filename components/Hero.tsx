@@ -6,7 +6,6 @@ import { GradientBlob } from "./ui/GradientBlob";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-
 const Hero = () => {
   const containerRef = useRef(null);
   const leftImageRef = useRef(null);
@@ -18,7 +17,6 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
 
-
   const { scrollYProgress: rightScrollProgress } = useScroll({
     target: rightImageRef,
     offset: ["start end", "end start"],
@@ -29,15 +27,29 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
 
-  const leftImageX = useTransform(leftScrollProgress, [0.2, 0.5], ["0%", "-90%"]);
+  const leftImageX = useTransform(
+    leftScrollProgress,
+    [0.2, 0.5],
+    ["0%", "-90%"]
+  );
 
-  const scaleTransform = useTransform(middleScrollProgress, [0.2, 0.4], [1, 0.9]);
+  const scaleTransform = useTransform(
+    middleScrollProgress,
+    [0.2, 0.4],
+    [1, 0.9]
+  );
 
-  const rightImageX = useTransform(rightScrollProgress, [0.2, 0.5], ["0%", "90%"]);
-
+  const rightImageX = useTransform(
+    rightScrollProgress,
+    [0.2, 0.5],
+    ["0%", "90%"]
+  );
 
   return (
-    <div ref={containerRef} className="relative flex-col items-center justify-center p-10 overflow-x-clip">
+    <div
+      ref={containerRef}
+      className="relative flex-col items-center justify-center p-10 overflow-x-clip"
+    >
       <div className="absolute -top-20 -left-40 opacity-50 -z-10">
         <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={500} blur={60} />
       </div>
