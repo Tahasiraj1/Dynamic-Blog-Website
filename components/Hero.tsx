@@ -3,12 +3,33 @@
 import React from "react";
 import Image from "next/image";
 import { GradientBlob } from "./ui/GradientBlob";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 
 const Hero = () => {
+  const containerRef = useRef(null);
+  const leftImageRef = useRef(null);
+  const rightImageRef = useRef(null);
+
+  const { scrollYProgress: leftScrollProgress } = useScroll({
+    target: leftImageRef,
+    offset: ["start end", "end start"],
+  });
+
+
+  const { scrollYProgress: rightScrollProgress } = useScroll({
+    target: rightImageRef,
+    offset: ["start end", "end start"],
+  });
+
+  const leftImageX = useTransform(leftScrollProgress, [0, 1], ["0%", "-150%"]);
+
+  const rightImageX = useTransform(rightScrollProgress, [0, 1], ["0%", "150%"]);
+
+
   return (
-    <div className="relative flex-col items-center justify-center p-10 overflow-x-clip">
+    <div ref={containerRef} className="relative flex-col items-center justify-center p-10 overflow-x-clip">
       <div className="absolute -top-20 -left-40 opacity-50 -z-10">
         <GradientBlob colors={["#FF00A9", "#00F0FF"]} size={500} blur={60} />
       </div>
@@ -34,6 +55,7 @@ const Hero = () => {
             damping: 10,
             stiffness: 100,
           }}
+          style={{ x: leftImageX }}
         >
           <Image
             src="/images/binary-6285217.jpg"
@@ -54,7 +76,6 @@ const Hero = () => {
             damping: 10,
             stiffness: 100,
           }}
-          // style={{ transform: 'scale(1.1)' }}
         >
           <Image
             src="/images/rahul-mishra-glmeeU0zabw-unsplash.jpg"
@@ -75,6 +96,7 @@ const Hero = () => {
             damping: 10,
             stiffness: 100,
           }}
+          style={{ x: rightImageX }}
         >
           <Image
             src="/images/pass2.jpg"
