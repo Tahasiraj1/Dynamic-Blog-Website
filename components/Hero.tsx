@@ -11,6 +11,7 @@ const Hero = () => {
   const containerRef = useRef(null);
   const leftImageRef = useRef(null);
   const rightImageRef = useRef(null);
+  const middleImageRef = useRef(null);
 
   const { scrollYProgress: leftScrollProgress } = useScroll({
     target: leftImageRef,
@@ -23,7 +24,14 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
 
+  const { scrollYProgress: middleScrollProgress } = useScroll({
+    target: middleImageRef,
+    offset: ["start end", "end start"],
+  });
+
   const leftImageX = useTransform(leftScrollProgress, [0.2, 0.5], ["0%", "-90%"]);
+
+  const scaleTransform = useTransform(middleScrollProgress, [0.2, 0.4], [1, 0.9]);
 
   const rightImageX = useTransform(rightScrollProgress, [0.2, 0.5], ["0%", "90%"]);
 
@@ -76,6 +84,7 @@ const Hero = () => {
             damping: 10,
             stiffness: 100,
           }}
+          style={{ scale: scaleTransform }}
         >
           <Image
             src="/images/rahul-mishra-glmeeU0zabw-unsplash.jpg"
