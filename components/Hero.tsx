@@ -23,9 +23,9 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
 
-  const leftImageX = useTransform(leftScrollProgress, [0, 0.7], ["0%", "-100%"]);
+  const leftImageX = useTransform(leftScrollProgress, [0.2, 0.5], ["0%", "-90%"]);
 
-  const rightImageX = useTransform(rightScrollProgress, [0, 0.7], ["0%", "100%"]);
+  const rightImageX = useTransform(rightScrollProgress, [0.2, 0.5], ["0%", "90%"]);
 
 
   return (
