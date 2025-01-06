@@ -55,13 +55,14 @@ const Hero = () => {
         <motion.div
           className="rounded-lg aspect-square overflow-hidden"
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{
             duration: 0.2,
             type: "spring",
             damping: 10,
             stiffness: 100,
+            delay: 0.2,
           }}
           style={{ x: leftImageX }}
         >
@@ -76,13 +77,14 @@ const Hero = () => {
         <motion.div
           className="absolute rounded-lg aspect-square overflow-hidden z-10"
           initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
             duration: 0.8,
             type: "spring",
             damping: 10,
             stiffness: 100,
+            delay: 0.2,
           }}
           style={{ scale: scaleTransform }}
         >
@@ -97,13 +99,14 @@ const Hero = () => {
         <motion.div
           className="rounded-lg aspect-square overflow-hidden"
           initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{
             duration: 0.2,
             type: "spring",
             damping: 10,
             stiffness: 100,
+            delay: 0.2,
           }}
           style={{ x: rightImageX }}
         >
